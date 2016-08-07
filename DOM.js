@@ -38,9 +38,13 @@ var TestBlock = {
 
 
 
+var questNumber = prompt('Введите общее число вопросов');
+var variantNumber = prompt('Введите общее число вариантов');
+
+
 TestBlock.title();
 TestBlock.setForm();
-TestBlock.setField('Вопрос 1');
+/*TestBlock.setField('Вопрос 1');
 TestBlock.setAnswerForFieldset('Variant 1', 1);
 TestBlock.setAnswerForFieldset('Variant 2', 1);
 TestBlock.setAnswerForFieldset('Variant 3', 1);
@@ -51,7 +55,18 @@ TestBlock.setAnswerForFieldset('Variant 3', 2);
 TestBlock.setField('Вопрос 3');
 TestBlock.setAnswerForFieldset('Variant 1', 3);
 TestBlock.setAnswerForFieldset('Variant 2', 3);
-TestBlock.setAnswerForFieldset('Variant 3', 3);
+TestBlock.setAnswerForFieldset('Variant 3', 3);*/
+
+
+for ( var i = 1; i <= questNumber; i++){
+	TestBlock.setField('Вопрос ' + i);
+		for ( var k = 1; k <= variantNumber; k++){
+			TestBlock.setAnswerForFieldset('Variant ' + k, i);
+			}
+	}
+
+
+
 TestBlock.setInp();
 
 
